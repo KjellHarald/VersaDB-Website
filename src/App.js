@@ -11,6 +11,7 @@ import Root from './Root/index.tsx'
 // Sites
 import Status from './routes/Status/index.tsx';
 import StatusAdmin from './routes/Status/admin.tsx';
+import ManualRoot from './routes/Manual/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/manual/",
-    element: <div>User Manual</div>
+    element: <ManualRoot/>
+  },
+  {
+    path: "/manual/create/",
+    element: <div>Create Database User</div>
   },
   {
     path: "/panel/",

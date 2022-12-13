@@ -50,6 +50,7 @@ const Status = ():JSX.Element => {
                 </div>
             </div>
             {statuses}
+            <a href="/status/admin/">Status Admin</a>
         </div>
     )
 }
