@@ -10,6 +10,7 @@ import Root from './Root/index.tsx'
 
 // Sites
 import Status from './routes/Status/index.tsx';
+import StatusAdmin from './routes/Status/admin.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/status/",
     element: <Status/>
+  },
+  {
+    path: "/status/admin/",
+    element: <StatusAdmin/>
   },
   {
     path: "/manual/",
