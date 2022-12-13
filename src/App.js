@@ -8,6 +8,9 @@ import {
 import Header from './components/header.tsx';
 import Root from './Root/index.tsx'
 
+// Sites
+import Status from './routes/Status/index.tsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/status/",
-    element: <div>Status</div>
+    element: <Status/>
   },
   {
     path: "/manual/",
