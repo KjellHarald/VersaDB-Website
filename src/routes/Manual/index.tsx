@@ -8,7 +8,7 @@ const ManualRoot = ():JSX.Element => {
                 {listOfLinks}
             </div>
             <div className="manual-content">
-                <h2>VersaDB User Manual</h2>
+            <h2>VersaDB User Manual</h2>
                 <p>Is a database system that focuses on <b><i>arbitary data, programmability and versatility.</i></b> 
                 VersaDB offers a "lose" schema that allow bypassing of the database engine for external processing.</p>
 
@@ -124,6 +124,7 @@ const ManualRoot = ():JSX.Element => {
                 <ul>
                     <li><b>Registration is Currently Closed.</b> - Registration is closed/Server Storage Limit</li>
                 </ul>
+                
             </div>
         </div>
     )
