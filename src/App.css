@@ -80,3 +80,57 @@ header div li a:hover {
   text-align: center;
   width:50px;
 }
+
+/*manual*/
+.wrap-manual {
+  display: flex;
+  gap:10px;
+}
+.wrap-manual > div {
+  padding:1% 2%;
+}
+.wrap-manual .manual-nav {
+  width:250px;
+  padding:0;
+  background-color: #f2f2f2;
+}
+.manual-nav a {
+  display:block;
+  color:#2e2e2e;
+  padding:12px;
+  text-decoration: none;
+}
+.manual-nav a:hover {
+  background-color: #fff;
+  color:#000;
+}
+
+#wrap-manual-content {
+  font-family: arial;
+}
+.subheading {
+  font-size:20px;
+  font-weight: bold;
+  margin-top:20px;
+  display:block;
+}
+.toc-title {
+  font-size:22px;
+  font-weight: bold;
+}
+#developer {
+  border-collapse: collapse;
+  box-shadow:2px 2px 2px 2px #f2f2f2;
+}
+#developer td {
+  padding:4px;
+  border-bottom: 1px solid #2e2e2e;
+}
+code {
+  display:block;
+  background-color: #f2f2f2;
+  border:1px dashed #2e2e2e;
+  border-radius:5px;
+  margin:6px auto;
+  padding:8px 12px;
+}

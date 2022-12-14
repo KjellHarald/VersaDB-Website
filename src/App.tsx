@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {
   createBrowserRouter,
@@ -30,17 +31,26 @@ const router = createBrowserRouter([
     path: "/manual/",
     element: <ManualRoot/>
   },
-  {
-    path: "/manual/create/",
-    element: <div>Create Database User</div>
-  },
+  {path:"/manual/create/", element: <div></div>},
+  {path:"/manual/create-db-user/", element: <div></div>},
+  {path:"/manual/db-write/", element: <div></div>},
+  {path:"/manual/db-write-enc/", element: <div></div>},
+  {path:"/manual/db-search/", element: <div></div>},
+  {path:"/manual/db-search-enc/", element: <div></div>},
+  {path:"/manual/frag/", element: <div></div>},
+  {path:"/manual/frag-info/", element: <div></div>},
+  {path:"/manual/db-frag/", element: <div></div>},
+  {path:"/manual/db-frag-write/", element: <div></div>},
+  {path:"/manual/create-frag/", element: <div></div>},
+  {path:"/manual/frag-dump/", element: <div></div>},
+  {path:"/manual/load-xmem/",  element: <div></div>},
   {
     path: "/panel/",
     element: <div>Web Panel</div>
   }
 ]);
 
-function App() {
+function App():JSX.Element {
   return (
     <>
     <Header/>
