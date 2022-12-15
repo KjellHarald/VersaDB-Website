@@ -105,9 +105,21 @@ header div li a:hover {
   background-color: #fff;
   color:#000;
 }
+.manual-nav a:active {
+  background-color: #fff;
+  color:#000;
+}
+.manual-nav a:focus {
+  background-color: #fff;
+  color:#000;
+}
 
 #wrap-manual-content {
   font-family: arial;
+  width:100%;
+}
+.manual-content {
+  width:100%;
 }
 .subheading {
   font-size:20px;

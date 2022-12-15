@@ -14,6 +14,13 @@ import StatusAdmin from './routes/Status/admin.tsx';
 import ManualRoot from './routes/Manual/index.tsx';
 import DbWrite from './routes/Manual/db-write.tsx';
 import DbSEarch from './routes/Manual/DbSearch.tsx';
+import Frag from './routes/Manual/frag.tsx'
+import FragInfo from './routes/Manual/fragInfo.tsx'
+import Dbfrag from './routes/Manual/dbFrag.tsx';
+import FragWrite from './routes/Manual/fragWrite.tsx';
+import FragCreate from './routes/Manual/createFrag.tsx';
+import FragDump from './routes/Manual/fragDump.tsx'
+import XloadMem from './routes/Manual/xloadMem.tsx'
 
 const router = createBrowserRouter([
   {
@@ -35,16 +42,14 @@ const router = createBrowserRouter([
   {path:"/manual/create/", element: <ManualRoot/>},
   {path:"/manual/create-db-user/", element: <ManualRoot/>},
   {path:"/manual/db-write/", element: <DbWrite/>},
-  {path:"/manual/db-write-enc/", element: <DbWrite/>},
   {path:"/manual/db-search/", element: <DbSEarch/>},
-  {path:"/manual/db-search-enc/", element: <DbSEarch/>},
-  {path:"/manual/frag/", element: <div></div>},
-  {path:"/manual/frag-info/", element: <div></div>},
-  {path:"/manual/db-frag/", element: <div></div>},
-  {path:"/manual/db-frag-write/", element: <div></div>},
-  {path:"/manual/create-frag/", element: <div></div>},
-  {path:"/manual/frag-dump/", element: <div></div>},
-  {path:"/manual/load-xmem/",  element: <div></div>},
+  {path:"/manual/frag/", element: <Frag/>},
+  {path:"/manual/frag-info/", element: <FragInfo/>},
+  {path:"/manual/db-frag/", element: <Dbfrag/>},
+  {path:"/manual/db-frag-write/", element: <FragWrite/>},
+  {path:"/manual/create-frag/", element: <FragCreate/>},
+  {path:"/manual/frag-dump/", element: <FragDump/>},
+  {path:"/manual/load-xmem/",  element: <XloadMem/>},
   {
     path: "/panel/",
     element: <div>Web Panel</div>
