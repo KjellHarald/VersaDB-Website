@@ -7,6 +7,7 @@ import {
 
 import Header from './components/header.tsx';
 import Root from './Root/index.tsx'
+import Panel from './routes/Panel/panel.tsx';
 
 // Sites
 import Status from './routes/Status/index.tsx';
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
   {path:"/manual/load-xmem/",  element: <XloadMem/>},
   {
     path: "/panel/",
-    element: <div>Web Panel</div>
+    element: <Panel/>
   }
 ]);
 
