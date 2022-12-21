@@ -9,23 +9,23 @@ const Panel = ():JSX.Element => {
     })
 
     const vdbApi = async (post:string) => {
-        const response:Response = await fetch('https://versa-db.com/web/api.php', {
+        const response:Response = await fetch('https://khps.no/api.php', {
             method: "POST",
             mode: "no-cors",
-            headers: {'Content-Type': 'application/json',}, 
-            body: JSON.stringify({webdb: post})
+            headers: {'Content-Type': 'text/html',}, 
+            body: JSON.stringify({"webdb": post})
         })
         
-        const data:string = await response.text()
+        const data:string = await JSON.parse(response)
         console.log(data)
+        if(data.trim() === "true"){
+            setLogin({
+                ...login,
+                isLoggedin: !login.isLoggedin
+            })
+        }
         if(post.split(' ')[0] === "-auth-only"){
-            if(data === "true"){
-                console.log(data)
-                setLogin({
-                    ...login,
-                    isLoggedin: !login.isLoggedin
-                })
-            }
+            
         }
     }
 
@@ -44,7 +44,6 @@ const Panel = ():JSX.Element => {
     const handleLogin = ():void => {
         const {username, password} = login
         vdbApi(`-auth-only ${username} ${password}`)
-        console.log('Login')
     }
 
     const render:JSX.Element = login.isLoggedin ? (

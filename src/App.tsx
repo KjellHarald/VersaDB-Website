@@ -8,6 +8,7 @@ import {
 import Header from './components/header.tsx';
 import Root from './Root/index.tsx'
 import Panel from './routes/Panel/panel.tsx';
+import Store from './routes/Store/index.tsx';
 
 // Sites
 import Status from './routes/Status/index.tsx';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+  },
+  {
+    path: "/store/",
+    element: <Store/>
   },
   {
     path: "/status/",
