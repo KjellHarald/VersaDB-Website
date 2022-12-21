@@ -44,8 +44,6 @@ const router = createBrowserRouter([
     path: "/manual/",
     element: <ManualRoot/>
   },
-  {path:"/manual/create/", element: <ManualRoot/>},
-  {path:"/manual/create-db-user/", element: <ManualRoot/>},
   {path:"/manual/db-write/", element: <DbWrite/>},
   {path:"/manual/db-search/", element: <DbSEarch/>},
   {path:"/manual/frag/", element: <Frag/>},

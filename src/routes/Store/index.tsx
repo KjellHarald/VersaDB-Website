@@ -142,10 +142,11 @@ const Shop = (props):JSX.Element => {
         <h1 style={{display:"flex", justifyContent:"center"}}>Thank you for your purcash</h1> 
         {checkout}
         <div className="total-price">
-    <p><b>Total:</b> {total}</p>
-    <p><b>Tax:</b> {taxTotal}</p>
-    </div>
-    <h2 style={{textAlign:"center"}}>Invoice Total: {total + taxTotal}</h2>
+        <p><b>Total:</b> {total}</p>
+        <p><b>Tax:</b> {taxTotal}</p>
+        </div>
+        <h2 style={{textAlign:"center"}}>Invoice Total: {total + taxTotal}</h2>
+        {localStorage.removeItem('versastore')}
     </div>)
     : (<div>404 Error</div>)
 
@@ -156,8 +157,7 @@ const Shop = (props):JSX.Element => {
 }
 
 const Store = ():JSX.Element => {
-    const storage = localStorage.getItem('versastore') !== null ? localStorage.getItem('versastore') : []
-    const props:[] = JSON.parse(storage)
+    const props:[] = JSON.parse(localStorage.getItem('versastore')) !== null ? JSON.parse(localStorage.getItem('versastore')) : []
 
     return (
         <div className="store">
