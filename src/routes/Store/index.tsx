@@ -11,10 +11,11 @@ const sendOrder = async () => {
 }
 */
 
-const Shop = ():JSX.Element => {
+const Shop = (props):JSX.Element => {
+    const {ls} = props
     const [display, setDisplay] = useState("store")
     const [produc, setProduc] = useState([])
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(ls)
 
     const fetchProducts = async () => {
         const response = await fetch('/items.json', {"method":"GET"})
@@ -53,6 +54,7 @@ const Shop = ():JSX.Element => {
     const taxTotal:number = cart.reduce((acc:number, prod:any) => acc + prod.price * 0.25, 0)
 
     const quickCalcTax = (sum:number):number => {
+        if(cart.length >= 1 ) localStorage.setItem("versastore", JSON.stringify(cart))
         return sum * 0.25
     }
 
@@ -154,9 +156,12 @@ const Shop = ():JSX.Element => {
 }
 
 const Store = ():JSX.Element => {
+    const storage = localStorage.getItem('versastore') !== null ? localStorage.getItem('versastore') : []
+    const props:[] = JSON.parse(storage)
+
     return (
         <div className="store">
-            <Shop/>
+            <Shop ls={props}/>
         </div>
     )
 }
