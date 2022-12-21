@@ -1,3 +1,6 @@
+body {
+  margin:0;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -120,6 +123,9 @@ header div li a:hover {
 }
 .manual-content {
   width:100%;
+}
+.manual-content h1 {
+  text-shadow:none !important;
 }
 .subheading {
   font-size:20px;

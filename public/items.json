@@ -2,7 +2,7 @@
     {
         "product": "Starter",
         "price": 5,
-        "description": "Get started with VersaDB for free on shared system.",
+        "description": "Store is deactivated.",
         "taxPercentage": 0.25,
         "storage": 2,
         "tags": ["Backup", "Data Backup"]
@@ -10,7 +10,7 @@
     {
         "product": "VersaDB VPS",
         "price": 10,
-        "description": "",
+        "description": "Store is deactivated.",
         "taxPercentage": 0.25,
         "storage": 50,
         "tags": ["Backup", "Data Backup"]
@@ -18,7 +18,7 @@
     {
         "product": "Dedicated VersaDB",
         "price": 99,
-        "description": "",
+        "description": "Store is deactivated.",
         "taxPercentage": 0.25,
         "storage": 10000,
         "tags": ["Backup", "Data Backup"]

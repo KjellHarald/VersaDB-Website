@@ -10,6 +10,7 @@ const Header = ():JSX.Element => {
                 <li><a href="/status/">Status</a></li>
                 <li><a href="/manual/">Manual</a></li>
                 <li><a href="/panel/">Panel</a></li>
+                <li><a href="/store/">Store</a></li>
             </div>
         </header>
     )

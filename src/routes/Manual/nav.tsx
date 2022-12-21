@@ -2,8 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const links: {path:string, name:string}[] = [
-    {path:"/manual/create/", name: "Create Database"},
-    {path:"/manual/create-db-user/", name: "Create Database User"},
+    {path:"/manual/", name: "Home"},
     {path:"/manual/db-write/", name: "Database Write"},
     {path:"/manual/db-search/", name: "Database Search"},
     {path:"/manual/frag/", name: "Database Frag"},

@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from "react";
 import './styles.css'
 
+/*
+This function is for usage at a later date
+const sendOrder = async () => {
+    const response = await fetch('', {
+        "method": "POST"
+    })
+    const data = await response.json()
+}
+*/
 
 const Shop = ():JSX.Element => {
     const [display, setDisplay] = useState("store")
@@ -18,10 +27,7 @@ const Shop = ():JSX.Element => {
     }, [])
 
     const addToCart = (prod) => {
-        setCart([
-            ...cart, 
-            prod
-        ])
+        setCart([...cart, prod])
     }
 
     const products:JSX.Element[] = produc.map((prod, id)=>{
@@ -105,7 +111,14 @@ const Shop = ():JSX.Element => {
     const renderStore:JSX.Element = display === "store" ? 
     (<>
         <div className="info">
-            <button id="cart-btn" onClick={()=> setDisplay('cart')} value="cart">Cart {cart.length}</button>
+            <button 
+                id="cart-btn" 
+                onClick={()=> setDisplay('cart')} 
+                value="cart" 
+                style={cart.length >= 1 ? {backgroundColor: "#00b140", color: "#fff"} : {backgroundColor:"red",color:"#fff"}} 
+                disabled={cart.length >= 1 ? false : true}>
+                    Cart {cart.length}
+            </button>
         </div>
         {products}
     </>
@@ -114,8 +127,8 @@ const Shop = ():JSX.Element => {
         <h1><span className="cart-count">{cart.length}</span> Cart</h1>
             {viewCart}
             <div className="checkout">
+                <button onClick={()=> setDisplay("store")}>Continue Shopping</button>
                 <button onClick={()=> setDisplay("checkout")}>Complete</button>
-                
                 <div className="total-price">
                     <p><b>Total:</b> {total}</p>
                     <p><b>Tax:</b> {taxTotal}</p>
@@ -124,7 +137,7 @@ const Shop = ():JSX.Element => {
         </>
     ) : display === "checkout" ? (
     <div>
-        <h3 className="purcash-complete">Thank you for your purcash</h3> 
+        <h1 style={{display:"flex", justifyContent:"center"}}>Thank you for your purcash</h1> 
         {checkout}
         <div className="total-price">
     <p><b>Total:</b> {total}</p>
